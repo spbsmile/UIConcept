@@ -45,6 +45,15 @@ namespace UIConcept.GUI
             }
             remain.text = (Convert.ToInt32(remain.text) - 1).ToString();
         }
+
+        public void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Time.timeScale = 0.0001f;
+                resultWindow.gameObject.SetActive(true);
+            }
+        }
     }
 }
 
